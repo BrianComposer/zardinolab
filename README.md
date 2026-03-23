@@ -116,12 +116,6 @@ ZardinoLab follows a few strong design rules:
 4. **Separation between generation and rendering**.
 5. **Clean packaging** for open-source distribution.
 
-## How this refactor improves the original codebase
-
-The original project already had a strong conceptual core: separate note and rhythm generators, support for Markov chains, a logistic map, cellular automata, and a BNF-style symbolic grammar. It also used a score-assembly pipeline and exported to MusicXML through `music21`. These ideas appeared in the original experimental modules and are now reorganized into a cleaner public package.
-
-This refactor keeps those same generative families, but replaces fragile list-based event encoding with dataclasses, enforces typed interfaces, normalizes naming, separates models from generators, and moves score export into its own dedicated exporter layer.
-
 ## Example workflows
 
 ### 1. Markov pitch + cellular rhythm
@@ -133,56 +127,3 @@ Useful for twelve-tone or cyclic systems over constrained rhythmic cells.
 ### 3. Grammar-based formal planning
 Use the grammar engine to generate symbolic formal plans before mapping them to actual musical material.
 
-## Build and publish
-
-### Build distributions
-
-```bash
-python -m build
-```
-
-This creates:
-
-- `dist/*.tar.gz`
-- `dist/*.whl`
-
-### Check package metadata
-
-```bash
-twine check dist/*
-```
-
-### Upload to TestPyPI
-
-```bash
-python -m twine upload --repository testpypi dist/*
-```
-
-### Upload to PyPI
-
-```bash
-python -m twine upload dist/*
-```
-
-## GitHub checklist
-
-Before publishing the repository:
-
-- add your real author name to `pyproject.toml`
-- replace the placeholder GitHub URLs
-- choose a license if you want a different one
-- add screenshots or generated score examples
-- optionally add GitHub Actions for tests and linting
-
-## Roadmap
-
-- MIDI export
-- harmonic constraints
-- phrase-level generators
-- grammar-to-score mapping utilities
-- probabilistic articulation and dynamics
-- corpus-derived transition estimation
-
-## License
-
-MIT
