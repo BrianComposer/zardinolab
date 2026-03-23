@@ -49,7 +49,7 @@ class SerialPitchGenerator(BasePitchGenerator):
         return pitch
 
 
-class ChaosPitchGenerator(BasePitchGenerator):
+class LogisticMapPitchGenerator(BasePitchGenerator):
     def __init__(self, low: int = 48, high: int = 72, r: float = 3.7, x0: float = 0.5) -> None:
         if low >= high:
             raise ValueError("The lower pitch bound must be smaller than the upper bound.")

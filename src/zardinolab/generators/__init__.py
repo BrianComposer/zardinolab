@@ -1,5 +1,5 @@
 from zardinolab.generators.pitch import (
-    ChaosPitchGenerator,
+    LogisticMapPitchGenerator,
     MarkovPitchGenerator,
     RandomPitchGenerator,
     SerialPitchGenerator,
@@ -12,7 +12,7 @@ from zardinolab.generators.rhythm import (
 
 __all__ = [
     "CellularAutomatonRhythmGenerator",
-    "ChaosPitchGenerator",
+    "LogisticMapPitchGenerator",
     "MarkovPitchGenerator",
     "PatternRhythmGenerator",
     "RandomPitchGenerator",

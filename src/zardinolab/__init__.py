@@ -4,7 +4,7 @@ from zardinolab.composers import CompositionPipeline, PipelineConfig
 from zardinolab.exporters import MusicXMLExporter
 from zardinolab.generators import (
     CellularAutomatonRhythmGenerator,
-    ChaosPitchGenerator,
+    LogisticMapPitchGenerator,
     MarkovPitchGenerator,
     PatternRhythmGenerator,
     RandomPitchGenerator,
@@ -14,7 +14,7 @@ from zardinolab.generators import (
 
 __all__ = [
     "CellularAutomatonRhythmGenerator",
-    "ChaosPitchGenerator",
+    "LogisticMapPitchGenerator",
     "CompositionPipeline",
     "MarkovPitchGenerator",
     "MusicXMLExporter",
